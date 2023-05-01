@@ -2,20 +2,20 @@
   kind: Deployment
 
   metadata:
-    name: my-backend-api
+    name: myapp
     labels:
-      app: my-backend-api
+      app: myapp
 
   spec:
     replicas: 1
     selector:
       matchLabels:
-        app: my-backend-api
+        app: myapp
     template:
       metadata:
         labels:
-          app: my-backend-api
+          app: myapp
       spec:
         containers:
-          - name: my-backend-api
+          - name: myapp
             image: spartx/spartnik-public:ts_test_api
